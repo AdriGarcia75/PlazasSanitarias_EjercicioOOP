@@ -6,18 +6,22 @@ public abstract class Persona {
     private String segundoApellido;
     private static int contador;
 
-    public Persona(int id, String nombre, String primerApellido, String segundoApellido) {
-        this.id = id;
+    public Persona(String nombre, String primerApellido, String segundoApellido) {
+        setId(id);
         this.nombre = nombre;
         this.primerApellido = primerApellido;
         this.segundoApellido = segundoApellido;
     }
+
+    //constructor por defecto
+    public Persona(){}
 
     public int getId() {
         return id;
     }
 
     public void setId(int id) {
+        id++;
         this.id = id;
     }
 

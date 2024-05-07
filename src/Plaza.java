@@ -6,7 +6,7 @@ public class Plaza {
     private boolean adjudicada;
     private Persona trabajador;
 
-    public Plaza(int id, char tipoPlaza, boolean adjudicada, Persona trabajador) {
+    public Plaza(int id, char tipoPlaza) {
         this.id = id;
         try {
             // en este if valido si el tipo de plaza es D/S
@@ -26,5 +26,45 @@ public class Plaza {
         this.trabajador = null;
     }
 
+    public int getId() {
+        return id;
+    }
 
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public char getTipoPlaza() {
+        return tipoPlaza;
+    }
+
+    public void setTipoPlaza(char tipoPlaza) {
+        this.tipoPlaza = tipoPlaza;
+    }
+
+    public boolean isAdjudicada() {
+        return adjudicada;
+    }
+
+    public void setAdjudicada(boolean adjudicada) {
+        this.adjudicada = adjudicada;
+    }
+
+    public Persona getTrabajador() {
+        return trabajador;
+    }
+
+    public void setTrabajador(Persona trabajador) {
+        this.trabajador = trabajador;
+    }
+
+    @Override
+    public String toString() {
+        return "Plaza{" +
+                "id=" + id +
+                ", tipoPlaza=" + tipoPlaza +
+                ", adjudicada=" + adjudicada +
+                ", trabajador=" + trabajador +
+                '}';
+    }
 }
